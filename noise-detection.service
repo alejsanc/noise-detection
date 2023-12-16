@@ -1,0 +1,13 @@
+[Unit]
+Description=Noise Detection
+Requires=systemd-udev-settle.service
+After=systemd-udev-settle.service
+
+[Service]
+Type=simple
+User=noise-detection
+ExecStart=/usr/local/bin/noise-detection.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
