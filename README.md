@@ -22,6 +22,8 @@ Noise detection with ARecord
 DIRECTORY=/var/lib/noise-detection
 MAX_VOLUME=75
 RECORD_SECONDS=10
-MICROPHONE=dsnoop:1,0</pre>
+MICROPHONE=dsnoop:1,0
+EMAIL_ACCOUNT=email-account
+ADMIN_EMAIL=admin@example.com</pre>
 
 More info in <a href="https://www.cuadernoinformatica.com/2023/12/deteccion-de-ruido-con-arecord.html">Detección de ruido con ARecord</a> blog article.
