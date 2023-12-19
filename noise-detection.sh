@@ -4,6 +4,8 @@ DIRECTORY=/var/lib/noise-detection
 MAX_VOLUME=75
 RECORD_SECONDS=10
 MICROPHONE=dsnoop:1,0
+EMAIL_ACCOUNT=email-account
+ADMIN_EMAIL=admin@example.com
 
 while read -n 54
 do
@@ -23,4 +25,4 @@ record=$DIRECTORY/$datetime.wav
 message="ND $datetime"
 
 arecord -D $MICROPHONE -f S16_LE -r 44100 -q -d $RECORD_SECONDS $record
-echo "$message" | s-nail -A cuenta-correo -s "$message" -a $record usuario@example.com
+echo "$message" | s-nail -A $EMAIL_ACCOUNT -s "$message" -a $record $ADMIN_EMAIL
